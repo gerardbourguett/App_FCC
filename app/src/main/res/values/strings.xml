@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">App_FCC</string>
+    <string name="btn_analisis">Realizar Análisis</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="tv_bienvenida">App desarrollada con el propósito de ayudar en la detección de sustancias</string>
+    <string name="marckis">Marckis</string>
+    <string name="mecke">Mecke</string>
+    <string name="mandelin">Mandelin</string>
+    <string name="simon_s_a_b">Simon\'s (A|B)</string>
+    <string name="liebermann">Liebermann</string>
+    <string name="froehde">Froehde</string>
+    <string name="folin_a_b">Folin (A|B)</string>
+    <string name="quimicos_a_usar">Quimico aplicado:</string>
+    <string name="todo">TODO</string>
+    <string name="subir_imagen">Cargar / Tomar imagen</string>
+    <string name="registrar">Registrar resultados</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="rgb">RGB:</string>
+    <string name="hex">HEX:</string>
+    <string name="resultado">Resultado</string>
+    <string name="quimico">Quimico:</string>
+</resources>

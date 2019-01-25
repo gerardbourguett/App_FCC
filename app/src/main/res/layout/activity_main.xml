@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/secondaryColor"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_bienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginBottom="121dp"
+        android:gravity="center"
+        android:text="@string/tv_bienvenida"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/btn_analisis"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <Button
+        android:id="@+id/btn_analisis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="@string/btn_analisis"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ayuda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bienvenida" />
+
+    <Button
+        android:id="@+id/btn_ayuda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginBottom="122dp"
+        android:text="@string/ayuda"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_analisis"
+        app:layout_constraintTop_toBottomOf="@+id/btn_analisis" />
+
+</android.support.constraint.ConstraintLayout>
