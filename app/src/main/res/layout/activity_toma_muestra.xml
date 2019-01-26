@@ -30,7 +30,7 @@
                 android:layout_marginBottom="15dp"
                 android:contentDescription="@string/todo"
                 android:scaleType="fitCenter"
-                android:src="@drawable/imageblank" />
+                android:src="@drawable/flores_4" />
 
             <Button
                 android:id="@+id/btnUpload"
@@ -69,57 +69,71 @@
 
                     <RadioButton
                         android:id="@+id/rb_marckis"
+                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/marckis"
+                        android:checked="true"
                         app:layout_column="0"
                         app:layout_row="2" />
 
                     <RadioButton
                         android:id="@+id/rb_mecke"
+                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/mecke"
+                        android:checked="false"
                         app:layout_column="1"
                         app:layout_row="2" />
 
                     <RadioButton
                         android:id="@+id/rb_mandelin"
+                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/mandelin"
+                        android:checked="false"
                         app:layout_column="2"
                         app:layout_row="2" />
 
                     <RadioButton
                         android:id="@+id/rb_simon"
+                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/simon_s_a_b"
+                        android:checked="false"
                         app:layout_column="0"
                         app:layout_row="3" />
 
                     <RadioButton
                         android:id="@+id/rb_liebermann"
+                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/liebermann"
+                        android:checked="false"
                         app:layout_column="1"
                         app:layout_row="3" />
 
                     <RadioButton
                         android:id="@+id/rb_froehde"
+                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/froehde"
+                        android:checked="false"
                         app:layout_column="2"
                         app:layout_row="3" />
 
                     <RadioButton
                         android:id="@+id/rb_folin"
+                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/folin_a_b"
+                        android:checked="false"
                         app:layout_column="0"
                         app:layout_row="4" />
 
@@ -127,37 +141,25 @@
             </RadioGroup>
 
             <TextView
-                android:id="@+id/txtVibrant"
+                android:id="@+id/txtHexa"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="4dp" />
 
             <TextView
-                android:id="@+id/txtDarkVibrant"
+                android:id="@+id/txtRGB"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="4dp" />
 
             <TextView
-                android:id="@+id/txtLightVibrant"
+                android:id="@+id/txtColor"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="4dp" />
 
             <TextView
-                android:id="@+id/txtMuted"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:padding="4dp" />
-
-            <TextView
-                android:id="@+id/txtDarkMuted"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:padding="4dp" />
-
-            <TextView
-                android:id="@+id/txtLightMuted"
+                android:id="@+id/txtQuimico"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="4dp" />

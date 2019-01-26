@@ -14,16 +14,21 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.net.URL;
 
 public class TomaMuestraActivity extends AppCompatActivity {
 
     private ImageView imageView;
-    private TextView textView, hexView, color;
+    private TextView textView, hexView, color, tvQuimico;
     private Bitmap bitmap;
     private Button registro;
+    private RadioGroup quimico;
+    private RadioButton radioButton;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -32,10 +37,12 @@ public class TomaMuestraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_toma_muestra);
 
         imageView = findViewById(R.id.imgImagen);
-        textView = findViewById(R.id.txtDarkVibrant);
-        hexView = findViewById(R.id.txtVibrant);
-        color = findViewById(R.id.txtLightVibrant);
+        textView = findViewById(R.id.txtRGB);
+        hexView = findViewById(R.id.txtHexa);
+        color = findViewById(R.id.txtColor);
         registro = findViewById(R.id.btn_registro);
+        quimico = findViewById(R.id.rg_quimicos);
+        tvQuimico = findViewById(R.id.txtQuimico);
 
         imageView.setDrawingCacheEnabled(true);
         imageView.buildDrawingCache(true);
@@ -71,6 +78,7 @@ public class TomaMuestraActivity extends AppCompatActivity {
                 Intent intent = new Intent(TomaMuestraActivity.this, RegistroMuestraActivity.class);
                 intent.putExtra("rgb_tm", textView.getText());
                 intent.putExtra("hex_tm", hexView.getText());
+                intent.putExtra("che_tm", tvQuimico.getText());
                 startActivity(intent);
             }
         });
@@ -88,7 +96,6 @@ public class TomaMuestraActivity extends AppCompatActivity {
 
     public void onclick(View view) {
         cargarImagen();
-
     }
 
     private void cargarImagen() {
@@ -103,6 +110,48 @@ public class TomaMuestraActivity extends AppCompatActivity {
         if (resultCode == RESULT_OK){
             Uri path = data.getData();
             imageView.setImageURI(path);
+        }
+    }
+
+    public void onRadioButtonCLicked(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch(view.getId()) {
+            case R.id.rb_marckis:
+                if (checked)
+                    //
+                    tvQuimico.setText("Marckis");
+                    break;
+            case R.id.rb_mecke:
+                if (checked)
+                    //
+                    tvQuimico.setText("Mecke");
+                    break;
+            case R.id.rb_mandelin:
+                if (checked)
+                    //
+                    tvQuimico.setText("Mandelin");
+                    break;
+            case R.id.rb_simon:
+                if (checked)
+                    //
+                    tvQuimico.setText("Simon");
+                    break;
+            case R.id.rb_liebermann:
+                if (checked)
+                    //
+                    tvQuimico.setText("Liebermann");
+                    break;
+            case R.id.rb_froehde:
+                if (checked)
+                    //
+                    tvQuimico.setText("Froehde");
+                    break;
+            case R.id.rb_folin:
+                if (checked)
+                    //
+                    tvQuimico.setText("Folin");
+                    break;
         }
     }
 }

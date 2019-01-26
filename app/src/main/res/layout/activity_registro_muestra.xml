@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/secondaryColor"
     tools:context=".RegistroMuestraActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginTop="158dp"
         android:layout_marginEnd="118dp"
         android:layout_marginRight="118dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -51,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
         android:text="@string/resultado"
+        android:textStyle="normal|bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
