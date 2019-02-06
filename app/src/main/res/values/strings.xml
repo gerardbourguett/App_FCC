@@ -19,4 +19,13 @@
     <string name="hex">HEX:</string>
     <string name="resultado">Resultado</string>
     <string name="quimico">Quimico:</string>
+    <string name="coincidencias">Coincidencias</string>
+    <string name="red1">Red1</string>
+    <string name="green1">Green1</string>
+    <string name="blue1">Blue1</string>
+    <string name="color1">Color1</string>
+    <string name="red2">Red2</string>
+    <string name="green2">Green2</string>
+    <string name="blue2">Blue2</string>
+    <string name="color2">Color2</string>
 </resources>

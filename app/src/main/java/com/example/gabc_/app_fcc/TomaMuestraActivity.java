@@ -60,11 +60,11 @@ public class TomaMuestraActivity extends AppCompatActivity {
                     int g = Color.green(pixel);
                     int b = Color.blue(pixel);
 
-                    textView.setBackgroundColor(Color.rgb(r,g,b));
-                    textView.setText("R("+r+") G("+g+") B("+b+")");
+                    //textView.setBackgroundColor(Color.rgb(r,g,b));
+                    textView.setText("("+r+","+g+","+b+")");
 
                     String c = ColorHex(r,g,b);
-                    hexView.setText("HEX: "+c);
+                    hexView.setText(c);
                     color.setBackgroundColor(android.graphics.Color.rgb(r,g,b));
                 }
 
