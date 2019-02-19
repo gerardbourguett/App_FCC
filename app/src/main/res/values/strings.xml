@@ -28,4 +28,27 @@
     <string name="green2">Green2</string>
     <string name="blue2">Blue2</string>
     <string name="color2">Color2</string>
+    <string name="sust1">sust1</string>
+    <string name="tvrgb">tvRGB</string>
+    <string name="tvhex">tvHEX</string>
+    <string name="tvquimico">tvQuimico</string>
+    <string name="resultados">RESULTADOS</string>
+    <string name="toma_2">Toma 2</string>
+    <string name="toma_1">Toma 1</string>
+    <string name="toma_4">Toma 4</string>
+    <string name="toma_3">Toma 3</string>
+    <string name="tvrgb2">tvRGB2</string>
+    <string name="tvrgb3">tvRGB3</string>
+    <string name="tvrgb4">tvRGB4</string>
+    <string name="tvhex2">tvHEX2</string>
+    <string name="tvhex23">tvHEX23</string>
+    <string name="tvhex24">tvHEX24</string>
+    <string name="tvquimico2">tvquimico2</string>
+    <string name="tvquimico3">tvquimico3</string>
+    <string name="tvquimico4">tvquimico4</string>
+    <string name="registro_1">Registro 1</string>
+    <string name="registro_2">Registro 2</string>
+    <string name="registro_string_toma_4">Registro @string/toma_4</string>
+    <string name="registro_3">Registro 3</string>
+    <string name="registro_4">Registro 4</string>
 </resources>

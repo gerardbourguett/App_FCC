@@ -8,177 +8,369 @@
     tools:context=".RegistroMuestraActivity">
 
     <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="196dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="34dp"
+        android:text="@string/resultados"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textResultado2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/resultado"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="22dp"
+        android:text="@string/toma_1"
         android:textStyle="normal|bold"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="47dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textRGB"
+        app:layout_constraintStart_toEndOf="@+id/textRGB" />
 
     <TextView
         android:id="@+id/rgb_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/tvrgb"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="123dp" />
+        app:layout_constraintStart_toStartOf="@+id/textResultado"
+        app:layout_constraintTop_toBottomOf="@+id/textResultado" />
 
     <TextView
         android:id="@+id/textRGB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginBottom="11dp"
         android:text="@string/rgb"
-        tools:layout_editor_absoluteX="190dp"
-        tools:layout_editor_absoluteY="123dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textHEX"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textHEX"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
         android:text="@string/hex"
-        tools:layout_editor_absoluteX="190dp"
-        tools:layout_editor_absoluteY="168dp" />
-
-    <TextView
-        android:id="@+id/hex_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        tools:layout_editor_absoluteX="235dp"
-        tools:layout_editor_absoluteY="169dp" />
+        app:layout_constraintBottom_toTopOf="@+id/textQuimico"
+        app:layout_constraintStart_toStartOf="@+id/textRGB" />
 
     <TextView
         android:id="@+id/textQuimico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/quimico"
-        tools:layout_editor_absoluteX="190dp"
-        tools:layout_editor_absoluteY="214dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/chemical_tv"
+        app:layout_constraintStart_toStartOf="@+id/textHEX" />
+
+    <TextView
+        android:id="@+id/hex_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="29dp"
+        android:text="@string/tvhex"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chemical_tv"
+        app:layout_constraintStart_toStartOf="@+id/rgb_tv"
+        app:layout_constraintTop_toTopOf="@+id/rgb_tv" />
 
     <TextView
         android:id="@+id/chemical_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="214dp" />
+        android:layout_marginBottom="31dp"
+        android:text="@string/tvquimico"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textResultado3"
+        app:layout_constraintStart_toStartOf="@+id/hex_tv" />
+
+    <TextView
+        android:id="@+id/hex_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/tvhex2"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chemical_tv2"
+        app:layout_constraintStart_toStartOf="@+id/chemical_tv2"
+        app:layout_constraintTop_toTopOf="@+id/rgb_tv2" />
+
+    <TextView
+        android:id="@+id/textQuimico2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:text="@string/quimico"
+        app:layout_constraintEnd_toStartOf="@+id/chemical_tv2"
+        app:layout_constraintTop_toBottomOf="@+id/rgb_tv2" />
+
+    <TextView
+        android:id="@+id/rgb_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="@string/tvrgb2"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textResultado2"
+        app:layout_constraintStart_toEndOf="@+id/textResultado2"
+        app:layout_constraintTop_toBottomOf="@+id/textResultado2" />
+
+    <TextView
+        android:id="@+id/chemical_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="@string/tvquimico2"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textQuimico2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textHEX2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="@string/hex"
+        app:layout_constraintBottom_toTopOf="@+id/textQuimico2"
+        app:layout_constraintStart_toStartOf="@+id/textQuimico2" />
+
+    <TextView
+        android:id="@+id/textRGB2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/rgb"
+        app:layout_constraintBottom_toTopOf="@+id/textHEX2"
+        app:layout_constraintStart_toStartOf="@+id/textHEX2" />
+
+    <TextView
+        android:id="@+id/textResultado2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/toma_2"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textResultado"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitulo"
+        app:layout_constraintStart_toEndOf="@+id/tvTitulo"
+        app:layout_constraintTop_toTopOf="@+id/textResultado" />
+
+    <TextView
+        android:id="@+id/rgb_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:text="@string/tvrgb4"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/hex_tv4"
+        app:layout_constraintTop_toBottomOf="@+id/chemical_tv2" />
+
+    <TextView
+        android:id="@+id/textResultado3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="19dp"
+        android:text="@string/toma_3"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toTopOf="@+id/textRGB3"
+        app:layout_constraintEnd_toEndOf="@+id/rgb_tv3" />
+
+    <TextView
+        android:id="@+id/textResultado4"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="54dp"
+        android:text="@string/toma_4"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toTopOf="@+id/hex_tv4"
+        app:layout_constraintEnd_toEndOf="@+id/rgb_tv4"
+        app:layout_constraintTop_toTopOf="@+id/chemical_tv2" />
+
+    <TextView
+        android:id="@+id/hex_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/tvhex24"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/hex_tv3"
+        app:layout_constraintStart_toStartOf="@+id/chemical_tv4"
+        app:layout_constraintTop_toTopOf="@+id/textHEX4" />
+
+    <TextView
+        android:id="@+id/chemical_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/tvquimico3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textQuimico3"
+        app:layout_constraintTop_toBottomOf="@+id/textHEX3" />
+
+    <TextView
+        android:id="@+id/textHEX3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/hex"
+        app:layout_constraintStart_toStartOf="@+id/textRGB3"
+        app:layout_constraintTop_toBottomOf="@+id/textRGB3" />
+
+    <TextView
+        android:id="@+id/hex_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="31dp"
+        android:text="@string/tvhex23"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chemical_tv3"
+        app:layout_constraintStart_toStartOf="@+id/chemical_tv3"
+        app:layout_constraintTop_toTopOf="@+id/rgb_tv3" />
+
+    <TextView
+        android:id="@+id/chemical_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="@string/tvquimico4"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textQuimico4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textRGB4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="@string/rgb"
+        app:layout_constraintBottom_toTopOf="@+id/textHEX4"
+        app:layout_constraintStart_toStartOf="@+id/textHEX4" />
+
+    <TextView
+        android:id="@+id/textHEX4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/hex"
+        app:layout_constraintBottom_toTopOf="@+id/textQuimico4"
+        app:layout_constraintStart_toStartOf="@+id/textQuimico4" />
+
+    <TextView
+        android:id="@+id/textQuimico3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quimico"
+        app:layout_constraintBaseline_toBaselineOf="@+id/chemical_tv3"
+        app:layout_constraintStart_toStartOf="@+id/textHEX3" />
+
+    <TextView
+        android:id="@+id/rgb_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="@string/tvrgb3"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/hex_tv3"
+        app:layout_constraintTop_toBottomOf="@+id/textResultado3" />
+
+    <TextView
+        android:id="@+id/textQuimico4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:text="@string/quimico"
+        app:layout_constraintEnd_toStartOf="@+id/chemical_tv4"
+        app:layout_constraintTop_toBottomOf="@+id/rgb_tv4" />
+
+    <TextView
+        android:id="@+id/textRGB3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="277dp"
+        android:text="@string/rgb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_coincidencias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="15dp"
         android:text="@string/coincidencias"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="308dp" />
+        app:layout_constraintBottom_toTopOf="@+id/blue1"
+        app:layout_constraintStart_toEndOf="@+id/green1" />
 
     <TextView
         android:id="@+id/red1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="356dp" />
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:text="@string/red1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/green1"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/green1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="356dp" />
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="83dp"
+        android:text="@string/green1"
+        app:layout_constraintStart_toEndOf="@+id/red1"
+        app:layout_constraintTop_toBottomOf="@+id/textQuimico3" />
 
     <TextView
         android:id="@+id/blue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="356dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/blue1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/green1"
+        app:layout_constraintStart_toStartOf="@+id/tv_coincidencias" />
 
     <TextView
-        android:id="@+id/color1"
+        android:id="@+id/sustancia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="352dp"
-        tools:layout_editor_absoluteY="356dp" />
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:text="@string/sust1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/hex_tv4"
+        app:layout_constraintStart_toEndOf="@+id/textQuimico4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_coincidencias" />
 
-    <TextView
-        android:id="@+id/red2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="375dp" />
-
-    <TextView
-        android:id="@+id/green2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="375dp" />
-
-    <TextView
-        android:id="@+id/blue2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="375dp" />
-
-    <TextView
-        android:id="@+id/color2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="352dp"
-        tools:layout_editor_absoluteY="375dp" />
-
-    <TextView
-        android:id="@+id/green3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="394dp" />
-
-    <TextView
-        android:id="@+id/red3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="394dp" />
-
-    <TextView
-        android:id="@+id/color3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="352dp"
-        tools:layout_editor_absoluteY="394dp" />
-
-    <TextView
-        android:id="@+id/blue3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="394dp" />
-
-    <TextView
-        android:id="@+id/color4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="352dp"
-        tools:layout_editor_absoluteY="413dp" />
-
-    <TextView
-        android:id="@+id/blue4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="413dp" />
-
-    <TextView
-        android:id="@+id/green4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="413dp" />
-
-    <TextView
-        android:id="@+id/red4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="419dp" />
 </android.support.constraint.ConstraintLayout>

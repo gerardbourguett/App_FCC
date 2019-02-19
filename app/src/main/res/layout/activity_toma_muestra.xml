@@ -8,8 +8,13 @@
     tools:context=".TomaMuestraActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/linearLayout"
@@ -40,10 +45,22 @@
                 android:onClick="onclick"
                 android:text="@string/subir_imagen" />
 
-            <RadioGroup
-                android:id="@+id/rg_quimicos"
+            <Button
+                android:id="@+id/btn_registro"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="wrap_content"
+                android:text="@string/registrar" />
+
+            <Button
+                android:id="@+id/btn_cancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancelar" />
+
+            <RadioGroup
+                android:id="@+id/rgQuimico"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <android.support.v7.widget.GridLayout
                     android:layout_width="match_parent"
@@ -69,71 +86,71 @@
 
                     <RadioButton
                         android:id="@+id/rb_marckis"
-                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/marckis"
                         android:checked="true"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/marckis"
                         app:layout_column="0"
                         app:layout_row="2" />
 
                     <RadioButton
                         android:id="@+id/rb_mecke"
-                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/mecke"
                         android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/mecke"
                         app:layout_column="1"
                         app:layout_row="2" />
 
                     <RadioButton
                         android:id="@+id/rb_mandelin"
-                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/mandelin"
                         android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/mandelin"
                         app:layout_column="2"
                         app:layout_row="2" />
 
                     <RadioButton
                         android:id="@+id/rb_simon"
-                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/simon_s_a_b"
                         android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/simon_s_a_b"
                         app:layout_column="0"
                         app:layout_row="3" />
 
                     <RadioButton
                         android:id="@+id/rb_liebermann"
-                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/liebermann"
                         android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/liebermann"
                         app:layout_column="1"
                         app:layout_row="3" />
 
                     <RadioButton
                         android:id="@+id/rb_froehde"
-                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/froehde"
                         android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/froehde"
                         app:layout_column="2"
                         app:layout_row="3" />
 
                     <RadioButton
                         android:id="@+id/rb_folin"
-                        android:onClick="onRadioButtonCLicked"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/folin_a_b"
                         android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/folin_a_b"
                         app:layout_column="0"
                         app:layout_row="4" />
 
@@ -147,13 +164,13 @@
                 android:padding="4dp" />
 
             <TextView
-                android:id="@+id/txtRGB"
+                android:id="@+id/txtColor"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="4dp" />
 
             <TextView
-                android:id="@+id/txtColor"
+                android:id="@+id/txtRGB"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:padding="4dp" />
@@ -165,16 +182,400 @@
                 android:padding="4dp" />
 
             <Button
-                android:id="@+id/btn_registro"
+                android:id="@+id/registro1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/registrar" />
+                android:text="@string/registro_1" />
+
+            <RadioGroup
+                android:id="@+id/rgQuimico2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_quimico2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quimicos_a_usar" />
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_column="0"
+                        app:layout_row="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_marckis2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/marckis"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mecke2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/mecke"
+                        app:layout_column="1"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mandelin2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/mandelin"
+                        app:layout_column="2"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_simon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/simon_s_a_b"
+                        app:layout_column="0"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_liebermann2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/liebermann"
+                        app:layout_column="1"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_froehde2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/froehde"
+                        app:layout_column="2"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_folin2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/folin_a_b"
+                        app:layout_column="0"
+                        app:layout_row="4" />
+
+                </android.support.v7.widget.GridLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtHexa2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtRGB2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtColor2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtQuimico2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
 
             <Button
-                android:id="@+id/btn_cancelar"
+                android:id="@+id/registro2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/cancelar" />
+                android:text="@string/registro_2" />
+
+            <RadioGroup
+                android:id="@+id/rgQuimico3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_quimico3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quimicos_a_usar" />
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_column="0"
+                        app:layout_row="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_marckis3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/marckis"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mecke3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/mecke"
+                        app:layout_column="1"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mandelin3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/mandelin"
+                        app:layout_column="2"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_simon3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/simon_s_a_b"
+                        app:layout_column="0"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_liebermann3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/liebermann"
+                        app:layout_column="1"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_froehde3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/froehde"
+                        app:layout_column="2"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_folin3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/folin_a_b"
+                        app:layout_column="0"
+                        app:layout_row="4" />
+
+                </android.support.v7.widget.GridLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtHexa3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtRGB3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtColor3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtQuimico3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <Button
+                android:id="@+id/registro3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registro_3" />
+
+            <RadioGroup
+                android:id="@+id/rgQuimico4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_quimico4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quimicos_a_usar" />
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_column="1"
+                        app:layout_row="0" />
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_column="0"
+                        app:layout_row="1" />
+
+                    <RadioButton
+                        android:id="@+id/rb_marckis4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/marckis"
+                        app:layout_column="0"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mecke4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/mecke"
+                        app:layout_column="1"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mandelin4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/mandelin"
+                        app:layout_column="2"
+                        app:layout_row="2" />
+
+                    <RadioButton
+                        android:id="@+id/rb_simon4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/simon_s_a_b"
+                        app:layout_column="0"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_liebermann4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/liebermann"
+                        app:layout_column="1"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_froehde4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/froehde"
+                        app:layout_column="2"
+                        app:layout_row="3" />
+
+                    <RadioButton
+                        android:id="@+id/rb_folin4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:onClick="onRadioButtonCLicked"
+                        android:text="@string/folin_a_b"
+                        app:layout_column="0"
+                        app:layout_row="4" />
+
+                </android.support.v7.widget.GridLayout>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtHexa4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtRGB4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtColor4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/txtQuimico4"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:padding="4dp" />
+
+            <Button
+                android:id="@+id/registro4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registro_4" />
 
         </LinearLayout>
     </ScrollView>
