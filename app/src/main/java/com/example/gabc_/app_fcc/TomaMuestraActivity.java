@@ -28,8 +28,9 @@ public class TomaMuestraActivity extends AppCompatActivity {
             textView3, textView4, hexView3, hexView4, color3, color4, tvQuimico3, tvQuimico4;
     private Bitmap bitmap;
     private Button registro;
-    private RadioGroup quimico;
-    private RadioButton radioButton;
+    private RadioGroup quimico, quimico2, quimico3, quimico4;
+    private RadioButton marckis1, mecke1, mandelin1, simon1, marckis2, mecke2, mandelin2, simon2,
+            marckis3, mecke3, mandelin3, simon3, marckis4, mecke4, mandelin4, simon4;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -39,24 +40,61 @@ public class TomaMuestraActivity extends AppCompatActivity {
 
         cancelar = findViewById(R.id.btn_cancelar);
         imageView = findViewById(R.id.imgImagen);
-        textView = findViewById(R.id.txtRGB);
-        hexView = findViewById(R.id.txtHexa);
-        color = findViewById(R.id.txtColor);
         registro = findViewById(R.id.btn_registro);
+
         quimico = findViewById(R.id.rgQuimico);
-        tvQuimico = findViewById(R.id.txtQuimico);
+        quimico2 = findViewById(R.id.rgQuimico2);
+        quimico3 = findViewById(R.id.rgQuimico3);
+        quimico4 = findViewById(R.id.rgQuimico4);
+
+        textView = findViewById(R.id.txtRGB);
         textView2 = findViewById(R.id.txtRGB2);
-        hexView2 = findViewById(R.id.txtHexa2);
-        color2 = findViewById(R.id.txtColor2);
-        tvQuimico2 = findViewById(R.id.txtQuimico2);
         textView3 = findViewById(R.id.txtRGB3);
-        hexView3 = findViewById(R.id.txtHexa3);
-        color3 = findViewById(R.id.txtColor3);
-        tvQuimico3 = findViewById(R.id.txtQuimico3);
         textView4 = findViewById(R.id.txtRGB4);
+
+        hexView = findViewById(R.id.txtHexa);
+        hexView2 = findViewById(R.id.txtHexa2);
+        hexView3 = findViewById(R.id.txtHexa3);
         hexView4 = findViewById(R.id.txtHexa4);
+
+        color = findViewById(R.id.txtColor);
+        color2 = findViewById(R.id.txtColor2);
+        color3 = findViewById(R.id.txtColor3);
         color4 = findViewById(R.id.txtColor4);
+
+        tvQuimico = findViewById(R.id.txtQuimico);
+        tvQuimico2 = findViewById(R.id.txtQuimico2);
+        tvQuimico3 = findViewById(R.id.txtQuimico3);
         tvQuimico4 = findViewById(R.id.txtQuimico4);
+
+        //RadioButton
+
+        marckis1 = findViewById(R.id.rb_marckis);
+        marckis2 = findViewById(R.id.rb_marckis2);
+        marckis3 = findViewById(R.id.rb_marckis3);
+        marckis4 = findViewById(R.id.rb_marckis4);
+
+        mecke1 = findViewById(R.id.rb_mecke);
+        mecke2 = findViewById(R.id.rb_mecke2);
+        mecke3 = findViewById(R.id.rb_mecke3);
+        mecke4 = findViewById(R.id.rb_mecke4);
+
+        mandelin1 = findViewById(R.id.rb_mandelin);
+        mandelin2 = findViewById(R.id.rb_mandelin2);
+        mandelin3 = findViewById(R.id.rb_mandelin3);
+        mandelin4 = findViewById(R.id.rb_mandelin4);
+
+        simon1 = findViewById(R.id.rb_simon);
+        simon2 = findViewById(R.id.rb_simon2);
+        simon3 = findViewById(R.id.rb_simon3);
+        simon4 = findViewById(R.id.rb_simon4);
+
+        //Botones
+
+        Button registro1 = findViewById(R.id.registro1);
+        Button registro2 = findViewById(R.id.registro2);
+        Button registro3 = findViewById(R.id.registro3);
+        Button registro4 = findViewById(R.id.registro4);
 
         imageView.setDrawingCacheEnabled(true);
         imageView.buildDrawingCache(true);
@@ -180,32 +218,18 @@ public class TomaMuestraActivity extends AppCompatActivity {
                 if (checked)
                     //
                     tvQuimico.setText("Mecke");
-                    break;
+                break;
             case R.id.rb_mandelin:
                 if (checked)
                     //
                     tvQuimico.setText("Mandelin");
-                    break;
+                break;
             case R.id.rb_simon:
                 if (checked)
                     //
                     tvQuimico.setText("Simon");
                     break;
-            case R.id.rb_liebermann:
-                if (checked)
-                    //
-                    tvQuimico.setText("Liebermann");
-                    break;
-            case R.id.rb_froehde:
-                if (checked)
-                    //
-                    tvQuimico.setText("Froehde");
-                    break;
-            case R.id.rb_folin:
-                if (checked)
-                    //
-                    tvQuimico.setText("Folin");
-                    break;
         }
     }
+
 }

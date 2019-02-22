@@ -51,4 +51,7 @@
     <string name="registro_string_toma_4">Registro @string/toma_4</string>
     <string name="registro_3">Registro 3</string>
     <string name="registro_4">Registro 4</string>
+    <string name="gestionar_imagen">GESTIONAR IMAGEN</string>
+    <string name="selecciona_imagen">Selecciona Imagen</string>
+    <string name="todo">TODO</string>
 </resources>

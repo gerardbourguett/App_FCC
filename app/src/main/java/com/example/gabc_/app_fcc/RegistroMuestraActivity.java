@@ -2,8 +2,10 @@ package com.example.gabc_.app_fcc;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.gabc_.app_fcc.constantes.Folin;
@@ -73,4 +75,6 @@ public class RegistroMuestraActivity extends AppCompatActivity implements Marcki
         color1tv.setText(MARCKIS_SMDMA);
 
     }
+
+
 }
